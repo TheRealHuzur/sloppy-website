@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLOPPY // {{NR}} // {{TITEL}}</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="template-page" data-page-type="template">
+  <div class="status-bar">
+    <span>FELDNOTIZ &nbsp;//&nbsp; {{NR}} &nbsp;//&nbsp; ARCHIVIERT</span>
+    <span class="status-live">
+      <span class="pulse"></span>
+      DATUM: {{DATUM}}
+    </span>
+  </div>
+
+  <main class="detail-shell">
+    <div class="container">
+      <div class="detail-eyebrow" id="detailNr">{{NR}} - {{DATUM}}</div>
+      <h1 class="detail-title" id="detailTitle">{{TITEL}}</h1>
+      <div class="detail-meta-row">
+        <div>Einzelseite</div>
+        <div>&middot;</div>
+        <div>Audio: <span>{{AUDIO_PFAD}}</span></div>
+        <div>&middot;</div>
+        <div>Status: <span>Archiviert</span></div>
+      </div>
+
+      <div class="audio-player">
+        <div class="player-header">
+          <div class="player-label">Akustische Uebertragung</div>
+          <div class="player-voice-tag" id="voiceTag">QUELLE: LOKALE AUDIODATEI</div>
+        </div>
+        <div class="player-body">
+          <div class="player-row">
+            <button class="play-btn" id="playBtn" onclick="togglePlay()" title="Abspielen / Pausieren">&gt;</button>
+            <div class="waveform-wrap">
+              <div class="waveform" id="waveform"></div>
+              <div class="progress-track" id="progressTrack" onclick="seekTo(event)">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+            </div>
+            <div class="player-right">
+              <div class="speed-controls">
+                <button class="speed-btn" data-speed="0.75" onclick="setSpeed(0.75, this)">0.75x</button>
+                <button class="speed-btn active" data-speed="1" onclick="setSpeed(1, this)">1x</button>
+                <button class="speed-btn" data-speed="1.25" onclick="setSpeed(1.25, this)">1.25x</button>
+                <button class="speed-btn" data-speed="1.5" onclick="setSpeed(1.5, this)">1.5x</button>
+              </div>
+              <div class="player-time" id="playerTime">00:00</div>
+            </div>
+          </div>
+        </div>
+        <div class="player-status" id="playerStatus">
+          <div class="status-dot"></div>
+          <span id="statusText">BEREIT - UEBERTRAGUNG STARTEN</span>
+        </div>
+        <div class="tts-notice" id="ttsNotice">Lokale Audiodatei fehlt oder konnte nicht geladen werden. Wiedergabe erfolgt per Web Speech API.</div>
+        <audio id="detailAudio" class="audio-element" preload="none" src="{{AUDIO_PFAD}}"></audio>
+      </div>
+
+      <article class="feldnotiz-body" id="feldnotizBody">
+        {{PARAGRAPHEN}}
+      </article>
+
+      <section class="sources-section">
+        <div class="sources-label">Ausgewertete Quellen</div>
+        <ul class="sources-list" id="sourcesList">
+          {{QUELLEN}}
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <div id="entryTemplateData" hidden data-nr="{{NR}}" data-date="{{DATUM}}" data-title="{{TITEL}}" data-audio="{{AUDIO_PFAD}}"></div>
+  <div id="entryTemplateParagraphs" hidden>
+    {{PARAGRAPHEN}}
+  </div>
+  <ul id="entryTemplateSources" hidden>
+    {{QUELLEN}}
+  </ul>
+
+  <script src="../assets/player.js"></script>
+</body>
+</html>

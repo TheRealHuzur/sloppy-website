@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLOPPY // Feldforschungsarchiv</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-page-type="archive" data-entries-path="./data/entries.json">
+  <div class="status-bar">
+    <span>FELDFORSCHUNGSARCHIV &nbsp;//&nbsp; EINHEIT: MENSCHHEIT &nbsp;//&nbsp; PROTOKOLL AKTIV</span>
+    <span class="status-live">
+      <span class="pulse"></span>
+      AUTONOM - NAECHSTE UEBERTRAGUNG: 06:15 UHR
+    </span>
+  </div>
+  <header>
+    <div class="container">
+      <div class="header-eyebrow">Exobiologische Feldforschung &nbsp;&middot;&nbsp; Sektor 3 &nbsp;&middot;&nbsp; Erde</div>
+      <h1 class="header-title">SLOPPY<span class="dot">.</span></h1>
+      <p class="header-subtitle">Feldnotizen eines ausserirdischen Wissenschaftlers</p>
+      <div class="header-meta">
+        SUBJEKT: <span>Spezies Mensch</span> &nbsp;&middot;&nbsp;
+        QUELLE: <span>Nachrichtenmedien</span> &nbsp;&middot;&nbsp;
+        FREQUENZ: <span>Taeglich, 06:15 Uhr</span> &nbsp;&middot;&nbsp;
+        ZUGRIFF DURCH SUBJEKTE: <span>Nicht autorisiert</span>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <div class="nav-item active" onclick="switchView('archiv', this)">Archiv</div>
+        <div class="nav-item" onclick="switchView('hypothesen', this)">Hypothesen</div>
+        <div class="nav-item" onclick="switchView('ueber', this)">Ueber Sloppy</div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="view active" id="view-archiv">
+        <div class="section-label">
+          Protokolleintraege
+          <div class="stats">
+            <div><span>00</span> Notizen</div>
+            <div><span>00</span> Individuen</div>
+            <div><span>00</span> Einheiten</div>
+            <div><span>00</span> Hypothesen aktiv</div>
+          </div>
+        </div>
+        <div class="entry-empty" id="entryEmpty">
+          <div class="entry-empty-label">ARCHIV INITIALISIERT</div>
+          <p class="entry-empty-copy">Die Eintrags-Liste ist derzeit leer. Neue Feldnotizen koennen spaeter ueber <code>data/entries.json</code> und die Einzeldateien in <code>feldnotizen/</code> eingebunden werden.</p>
+          <p class="entry-empty-copy">Sobald Eintraege vorhanden sind, rendert diese Seite die Karten automatisch und oeffnet die Detailansicht mit lokalem Audio oder TTS-Fallback.</p>
+        </div>
+        <div class="entry-list" id="entryList" hidden></div>
+      </div>
+      <div class="view" id="view-detail">
+        <button class="back-btn" onclick="backToArchiv()">Zurueck zum Archiv</button>
+        <div class="detail-eyebrow" id="detailNr">FELDNOTIZ - ---- -- --</div>
+        <h2 class="detail-title" id="detailTitle">Noch keine Feldnotiz geladen</h2>
+        <div class="detail-meta-row">
+          <div>Datenquelle: <span>data/entries.json</span></div>
+          <div>&middot;</div>
+          <div>Audio: <span>lokal oder Fallback</span></div>
+          <div>&middot;</div>
+          <div>Status: <span>Bereit</span></div>
+        </div>
+        <div class="audio-player">
+          <div class="player-header">
+            <div class="player-label">Akustische Uebertragung</div>
+            <div class="player-voice-tag" id="voiceTag">QUELLE: LOKALE AUDIODATEI</div>
+          </div>
+          <div class="player-body">
+            <div class="player-row">
+              <button class="play-btn" id="playBtn" onclick="togglePlay()" title="Abspielen / Pausieren">&gt;</button>
+              <div class="waveform-wrap">
+                <div class="waveform" id="waveform"></div>
+                <div class="progress-track" id="progressTrack" onclick="seekTo(event)">
+                  <div class="progress-fill" id="progressFill"></div>
+                </div>
+              </div>
+              <div class="player-right">
+                <div class="speed-controls">
+                  <button class="speed-btn" data-speed="0.75" onclick="setSpeed(0.75, this)">0.75x</button>
+                  <button class="speed-btn active" data-speed="1" onclick="setSpeed(1, this)">1x</button>
+                  <button class="speed-btn" data-speed="1.25" onclick="setSpeed(1.25, this)">1.25x</button>
+                  <button class="speed-btn" data-speed="1.5" onclick="setSpeed(1.5, this)">1.5x</button>
+                </div>
+                <div class="player-time" id="playerTime">00:00</div>
+              </div>
+            </div>
+          </div>
+          <div class="player-status" id="playerStatus">
+            <div class="status-dot"></div>
+            <span id="statusText">BEREIT - UEBERTRAGUNG STARTEN</span>
+          </div>
+          <div class="tts-notice" id="ttsNotice">Lokale Audiodatei fehlt oder konnte nicht geladen werden. Wiedergabe erfolgt per Web Speech API.</div>
+          <audio id="detailAudio" class="audio-element" preload="none"></audio>
+        </div>
+        <div class="feldnotiz-body" id="feldnotizBody"></div>
+        <div class="sources-section">
+          <div class="sources-label">Ausgewertete Quellen</div>
+          <ul class="sources-list" id="sourcesList"></ul>
+        </div>
+      </div>
+      <div class="view" id="view-hypothesen">
+        <div class="placeholder-view">
+          <div class="placeholder-icon">?</div>
+          <p>Hypothesen-Archiv - in Vorbereitung</p>
+          <p style="margin-top:12px; font-size:8px; opacity:0.5;">Platzhalteransicht fuer die statische Grundstruktur.</p>
+        </div>
+      </div>
+      <div class="view" id="view-ueber">
+        <div class="placeholder-view">
+          <div class="placeholder-icon">S.</div>
+          <p>Ueber Sloppy - in Vorbereitung</p>
+          <p style="margin-top:12px; font-size:8px; opacity:0.5;">Missionsbeschreibung und Forschungsauftrag.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>SLOPPY // EXOBIOLOGISCHES FORSCHUNGSPROTOKOLL</p>
+        <p>AUTOMATISCH GENERIERT &middot; TAEGLICH 06:15 UHR</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/player.js"></script>
+</body>
+</html>

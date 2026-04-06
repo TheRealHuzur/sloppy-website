@@ -1,1 +1,1 @@
-$('entries.json + index.html bauen').first().json.entriesBase64
+[]

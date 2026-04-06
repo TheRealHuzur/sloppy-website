@@ -1,1 +1,0 @@
-$('Google TTS — Charon').first().json.audioContent.replace(/\s+/g, '')

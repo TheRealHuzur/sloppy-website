@@ -1,133 +1,245 @@
-<!DOCTYPE html>
-<html lang="de">
+﻿<!DOCTYPE html>
+<html lang="de" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SLOPPY // Feldforschungsarchiv</title>
-  <link rel="stylesheet" href="./assets/style.css">
+  <title>Sloppy — Feldforschungsarchiv</title>
+
+  <!--
+    PRODUKTION: Fonts lokal hosten (DSGVO).
+    Diese drei Familien in assets/fonts/ ablegen:
+    - Space Mono (400, 700, 400italic)
+    - DM Serif Display (400, 400italic)
+    - Lora (400, 500, 600, 400italic)
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page-type="archive" data-entries-path="./data/entries.json">
-  <div class="status-bar">
-    <span>FELDFORSCHUNGSARCHIV &nbsp;//&nbsp; EINHEIT: MENSCHHEIT &nbsp;//&nbsp; PROTOKOLL AKTIV</span>
-    <span class="status-live">
-      <span class="pulse"></span>
-      AUTONOM - NAECHSTE UEBERTRAGUNG: 06:15 UHR
-    </span>
-  </div>
-  <header>
-    <div class="container">
-      <div class="header-eyebrow">Exobiologische Feldforschung &nbsp;&middot;&nbsp; Sektor 3 &nbsp;&middot;&nbsp; Erde</div>
-      <h1 class="header-title">SLOPPY<span class="dot">.</span></h1>
-      <p class="header-subtitle">Feldnotizen eines ausserirdischen Wissenschaftlers</p>
-      <div class="header-meta">
-        SUBJEKT: <span>Spezies Mensch</span> &nbsp;&middot;&nbsp;
-        QUELLE: <span>Nachrichtenmedien</span> &nbsp;&middot;&nbsp;
-        FREQUENZ: <span>Taeglich, 06:15 Uhr</span> &nbsp;&middot;&nbsp;
-        ZUGRIFF DURCH SUBJEKTE: <span>Nicht autorisiert</span>
+<body>
+
+  <!-- ═══════════════════════
+       HEADER
+  ═══════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <span class="header-icon"><img class="header-icon-img" src="assets/icons/school_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+        <span class="header-icon-sep">&amp;</span>
+        <span class="header-icon"><img class="header-icon-img" src="assets/icons/construction_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+      </div>
+      <div class="header-right">
+        <div class="status-badge">
+          <div class="status-dot"></div>
+          Protokoll aktiv
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Theme wechseln"></button>
       </div>
     </div>
   </header>
-  <nav>
-    <div class="container">
+
+  <!-- ═══════════════════════
+       PAGE HEADER
+  ═══════════════════════ -->
+  <div class="container">
+    <div class="page-header">
+      <div class="page-eyebrow">Erforschung der Spezies Mensch</div>
+      <h1 class="page-title">SLOPPY<span class="title-dot">.</span></h1>
+      <p class="page-subtitle">Feldnotizen eines außerirdischen Wissenschaftlers</p>
+      <div class="page-meta">
+        Subjekt: <strong>Spezies Mensch</strong> &nbsp;·&nbsp;
+        Quelle: <strong>Nachrichtenmedien</strong> &nbsp;·&nbsp;
+        Frequenz: <strong>Täglich, 06:15 Uhr</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════
+       NAV
+  ═══════════════════════ -->
+  <div class="container">
+    <nav class="site-nav">
       <div class="nav-inner">
         <div class="nav-item active" onclick="switchView('archiv', this)">Archiv</div>
         <div class="nav-item" onclick="switchView('hypothesen', this)">Hypothesen</div>
-        <div class="nav-item" onclick="switchView('ueber', this)">Ueber Sloppy</div>
+        <div class="nav-item" onclick="switchView('ueber', this)">Über Sloppy</div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
+
+  <!-- ═══════════════════════
+       MAIN
+  ═══════════════════════ -->
   <main>
     <div class="container">
+
+      <!-- ARCHIV -->
       <div class="view active" id="view-archiv">
         <div class="section-label">
-          Protokolleintraege
-          <div class="stats">
-            <div><span>00</span> Notizen</div>
-            <div><span>00</span> Individuen</div>
-            <div><span>00</span> Einheiten</div>
-            <div><span>00</span> Hypothesen aktiv</div>
+          Protokolleinträge
+          <div class="section-stats">
+            <div><span>03</span> Notizen</div>
+            <div><span>07</span> Individuen</div>
+            <div><span>12</span> Einheiten</div>
+            <div><span>04</span> Hypothesen aktiv</div>
           </div>
         </div>
-        <div class="entry-empty" id="entryEmpty">
-          <div class="entry-empty-label">ARCHIV INITIALISIERT</div>
-          <p class="entry-empty-copy">Die Eintrags-Liste ist derzeit leer. Neue Feldnotizen koennen spaeter ueber <code>data/entries.json</code> und die Einzeldateien in <code>feldnotizen/</code> eingebunden werden.</p>
-          <p class="entry-empty-copy">Sobald Eintraege vorhanden sind, rendert diese Seite die Karten automatisch und oeffnet die Detailansicht mit lokalem Audio oder TTS-Fallback.</p>
+
+        <div class="entry-list">
+
+          <div class="entry-card" onclick="showDetail(entries[0])">
+            <div>
+              <div class="entry-id">Feldnotiz 03</div>
+              <div class="entry-date">2026-03-25</div>
+              <div class="entry-date" style="margin-top:8px; opacity:0.6;">5 Quellen</div>
+            </div>
+            <div class="entry-preview">
+              Die Beobachtungen dieser Periode werfen Fragen zur internen Stabilität und Organisationsstruktur der menschlichen Spezies auf. Innerhalb einer der geographischen Einheiten scheint der aktuelle Leitungsträger eine statistische Korrelation...
+            </div>
+            <div class="entry-meta">
+              Protokoll öffnen
+              <span class="entry-open">→</span>
+              <div class="card-play-btn">
+                <span class="card-play-label">Anhören</span>
+                <button class="card-play-icon" onclick="event.stopPropagation(); cardPlay(entries[0])" title="Jetzt abspielen">▶</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="entry-card" onclick="showDetail(entries[1])">
+            <div>
+              <div class="entry-id">Feldnotiz 02</div>
+              <div class="entry-date">2026-03-26</div>
+              <div class="entry-date" style="margin-top:8px; opacity:0.6;">4 Quellen</div>
+            </div>
+            <div class="entry-preview">
+              Neue Beobachtungen zu Ressourcenallokation und rituellen Wettbewerbsformaten. Die Spezies zeigt auffälliges Verhalten bei der Verteilung knapper Güter...
+            </div>
+            <div class="entry-meta">
+              Protokoll öffnen
+              <span class="entry-open">→</span>
+              <div class="card-play-btn">
+                <span class="card-play-label">Anhören</span>
+                <button class="card-play-icon" onclick="event.stopPropagation(); cardPlay(entries[1])" title="Jetzt abspielen">▶</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="entry-card" onclick="showDetail(entries[2])">
+            <div>
+              <div class="entry-id">Feldnotiz 01</div>
+              <div class="entry-date">2026-03-28</div>
+              <div class="entry-date" style="margin-top:8px; opacity:0.6;">6 Quellen</div>
+            </div>
+            <div class="entry-preview">
+              Erstbeobachtung. Die Spezies organisiert sich in geographisch abgegrenzten Einheiten mit jeweils eigener Leitungsstruktur. Auffällig: multiple simultane Konflikte...
+            </div>
+            <div class="entry-meta">
+              Protokoll öffnen
+              <span class="entry-open">→</span>
+              <div class="card-play-btn">
+                <span class="card-play-label">Anhören</span>
+                <button class="card-play-icon" onclick="event.stopPropagation(); cardPlay(entries[2])" title="Jetzt abspielen">▶</button>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="entry-list" id="entryList" hidden></div>
       </div>
+
+      <!-- DETAIL -->
       <div class="view" id="view-detail">
-        <button class="back-btn" onclick="backToArchiv()">Zurueck zum Archiv</button>
-        <div class="detail-eyebrow" id="detailNr">FELDNOTIZ - ---- -- --</div>
-        <h2 class="detail-title" id="detailTitle">Noch keine Feldnotiz geladen</h2>
+        <button class="back-btn" onclick="backToArchiv()">← Zurück zum Archiv</button>
+
+        <div class="detail-eyebrow" id="detailNr">Feldnotiz 03 · 2026-03-25</div>
+        <h2 class="detail-title" id="detailTitle">Interne Instabilität &<br>parallele Dysfunktionen</h2>
+
         <div class="detail-meta-row">
-          <div>Datenquelle: <span>data/entries.json</span></div>
-          <div>&middot;</div>
-          <div>Audio: <span>lokal oder Fallback</span></div>
-          <div>&middot;</div>
-          <div>Status: <span>Bereit</span></div>
+          <div>5 Quellen ausgewertet</div>
+          <div>·</div>
+          <div>4 Einheiten klassifiziert</div>
+          <div>·</div>
+          <div>2 Hypothesen aktualisiert</div>
+          <div>·</div>
+          <div>Status: <strong>Archiviert</strong></div>
         </div>
+
+        <!-- Audio Player -->
         <div class="audio-player">
-          <div class="player-header">
-            <div class="player-label">Akustische Uebertragung</div>
-            <div class="player-voice-tag" id="voiceTag">QUELLE: LOKALE AUDIODATEI</div>
+          <div class="player-top">
+            <div class="player-label">Akustische Übertragung</div>
+            <div class="player-voice">Stimme: Charon · de-DE-Chirp3-HD</div>
           </div>
           <div class="player-body">
             <div class="player-row">
-              <button class="play-btn" id="playBtn" onclick="togglePlay()" title="Abspielen / Pausieren">&gt;</button>
+              <button class="play-btn" id="playBtn" onclick="togglePlay()">▶</button>
               <div class="waveform-wrap">
                 <div class="waveform" id="waveform"></div>
-                <div class="progress-track" id="progressTrack" onclick="seekTo(event)">
+                <div class="progress-track" onclick="seekTo(event)">
                   <div class="progress-fill" id="progressFill"></div>
                 </div>
               </div>
               <div class="player-right">
                 <div class="speed-controls">
-                  <button class="speed-btn" data-speed="0.75" onclick="setSpeed(0.75, this)">0.75x</button>
-                  <button class="speed-btn active" data-speed="1" onclick="setSpeed(1, this)">1x</button>
-                  <button class="speed-btn" data-speed="1.25" onclick="setSpeed(1.25, this)">1.25x</button>
-                  <button class="speed-btn" data-speed="1.5" onclick="setSpeed(1.5, this)">1.5x</button>
+                  <button class="speed-btn" onclick="setSpeed(0.75,this)">0.75×</button>
+                  <button class="speed-btn active" onclick="setSpeed(1,this)">1×</button>
+                  <button class="speed-btn" onclick="setSpeed(1.25,this)">1.25×</button>
+                  <button class="speed-btn" onclick="setSpeed(1.5,this)">1.5×</button>
                 </div>
                 <div class="player-time" id="playerTime">00:00</div>
               </div>
             </div>
           </div>
           <div class="player-status" id="playerStatus">
-            <div class="status-dot"></div>
-            <span id="statusText">BEREIT - UEBERTRAGUNG STARTEN</span>
+            <div class="pstatus-dot"></div>
+            <span id="statusText">Bereit — Übertragung starten</span>
           </div>
-          <div class="tts-notice" id="ttsNotice">Lokale Audiodatei fehlt oder konnte nicht geladen werden. Wiedergabe erfolgt per Web Speech API.</div>
-          <audio id="detailAudio" class="audio-element" preload="none"></audio>
         </div>
+
+        <!-- Feldnotiz Text -->
         <div class="feldnotiz-body" id="feldnotizBody"></div>
+
+        <!-- Sources -->
         <div class="sources-section">
           <div class="sources-label">Ausgewertete Quellen</div>
           <ul class="sources-list" id="sourcesList"></ul>
         </div>
       </div>
+
+      <!-- HYPOTHESEN -->
       <div class="view" id="view-hypothesen">
-        <div class="placeholder-view">
+        <div class="placeholder">
           <div class="placeholder-icon">?</div>
-          <p>Hypothesen-Archiv - in Vorbereitung</p>
-          <p style="margin-top:12px; font-size:8px; opacity:0.5;">Platzhalteransicht fuer die statische Grundstruktur.</p>
+          <p>Hypothesen-Archiv — in Vorbereitung</p>
         </div>
       </div>
+
+      <!-- ÜBER -->
       <div class="view" id="view-ueber">
-        <div class="placeholder-view">
+        <div class="placeholder">
           <div class="placeholder-icon">S.</div>
-          <p>Ueber Sloppy - in Vorbereitung</p>
-          <p style="margin-top:12px; font-size:8px; opacity:0.5;">Missionsbeschreibung und Forschungsauftrag.</p>
+          <p>Über Sloppy — in Vorbereitung</p>
         </div>
       </div>
+
     </div>
   </main>
+
+  <!-- ═══════════════════════
+       FOOTER
+  ═══════════════════════ -->
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <p>SLOPPY // EXOBIOLOGISCHES FORSCHUNGSPROTOKOLL</p>
-        <p>AUTOMATISCH GENERIERT &middot; TAEGLICH 06:15 UHR</p>
+        <p>Sloppy · Exobiologisches Forschungsprotokoll</p>
+        <p>Automatisch generiert · Täglich 06:15 Uhr</p>
       </div>
     </div>
   </footer>
-  <script src="./assets/player.js"></script>
+
+
+    <script src="assets/player.js"></script>
+
 </body>
 </html>
+

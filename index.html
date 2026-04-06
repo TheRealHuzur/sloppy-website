@@ -1,1 +1,94 @@
-$('entries.json + index.html bauen').first().json.indexHtml
+=<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sloppy — Feldforschungsarchiv</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <span class="header-icon"><img class="header-icon-img" src="assets/icons/school_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+        <span class="header-icon-sep">&amp;</span>
+        <span class="header-icon"><img class="header-icon-img" src="assets/icons/construction_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+      </div>
+      <div class="header-right">
+        <div class="status-badge">
+          <div class="status-dot"></div>
+          Protokoll aktiv
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Theme wechseln"></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="page-eyebrow">Erforschung der Spezies Mensch</div>
+      <h1 class="page-title">SLOPPY<span class="title-dot">.</span></h1>
+      <p class="page-subtitle">Feldnotizen eines außerirdischen Wissenschaftlers</p>
+      <div class="page-meta">
+        Subjekt: <strong>Spezies Mensch</strong> &nbsp;·&nbsp;
+        Quelle: <strong>Nachrichtenmedien</strong> &nbsp;·&nbsp;
+        Frequenz: <strong>Täglich, 06:15 Uhr</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <div class="nav-item active">Archiv</div>
+        <div class="nav-item">Hypothesen</div>
+        <div class="nav-item">Über Sloppy</div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="view active">
+        <div class="section-label">
+          Protokolleinträge
+          <div class="section-stats">
+            <span>1</span> Notizen
+          </div>
+        </div>
+        <div class="entry-list">
+          
+          <div class="entry-card" onclick="location.href='feldnotizen/2026-04-06.html'">
+            <div>
+              <div class="entry-id">Feldnotiz 20260406</div>
+              <div class="entry-date">2026-04-06</div>
+              <div class="entry-date" style="margin-top:8px; opacity:0.6;">1 Quellen</div>
+            </div>
+            <div class="entry-preview">Testnotiz....</div>
+            <div class="entry-meta">
+              Protokoll öffnen
+              <span class="entry-open">→</span>
+              <div class="card-play-btn">
+                <span class="card-play-label">Anhören</span>
+                <a class="card-play-icon" href="feldnotizen/2026-04-06.html" title="Jetzt abspielen">▶</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>Sloppy · Exobiologisches Forschungsprotokoll</p>
+        <p>Automatisch generiert · Täglich 06:15 Uhr</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/player.js"></script>
+</body>
+</html>

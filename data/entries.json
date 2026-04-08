@@ -1,80 +1,86 @@
 [
-    {
-        "datum":  "2026-04-07",
-        "nr":  "20260407",
-        "preview":  "Feldnotiz — 2026-04-07 Die Beobachtungen bestätigen die Hypothese 13_1 hinsichtlich der Synchronisierung von Ereignissen. Die Berichterstattung gruppiert technologische Vorgänge außerhalb des terrestr",
-        "quellenanzahl":  4
-    },
-    {
-        "datum":  "2026-04-06",
-        "nr":  "20260406",
-        "preview":  "Feldnotiz — 2026-04-06 Die Datenlage bestätigt die hohe Vulnerabilität der Spezies gegenüber Schwankungen in der Verfügbarkeit energetischer Ressourcen. Die Beobachtung einer geographischen Einheit in",
-        "quellenanzahl":  6
-    },
-    {
-        "datum":  "2026-04-05",
-        "nr":  "20260405",
-        "preview":  "Feldnotiz — 2026-04-05 Die Beobachtungen der letzten Erfassungsperiode zeigen eine Zunahme kinetischer Energieeinwirkungen auf infrastrukturelle und biologische Ziele. Die geographische Einheit Iran h",
-        "quellenanzahl":  8
-    },
-    {
-        "datum":  "2026-04-04",
-        "nr":  "20260404",
-        "preview":  "Feldnotiz — 2026-04-04 Die Beobachtungen bestätigen eine anhaltende kinetische Interaktion zwischen verschiedenen geographischen Einheiten. Es lässt sich eine räumliche Ausweitung feststellen, bei der",
-        "quellenanzahl":  9
-    },
-    {
-        "datum":  "2026-04-03",
-        "nr":  "20260403",
-        "preview":  "Feldnotiz — 2026-04-03 Die Beobachtung der menschlichen Spezies zeigt weiterhin eine hohe Fragmentierung und Widersprüchlichkeit in der kollektiven Steuerung. 1. Raumfahrt: Ein Teil der Spezies (NASA)",
-        "quellenanzahl":  8
-    },
-    {
-        "datum":  "2026-04-01",
-        "nr":  "20260401",
-        "preview":  "Feldnotiz — 2026-04-01 Die Beobachtungen des aktuellen Zeitraums zeigen eine Zunahme an Interaktionen, die als physische Neutralisierung oder psychische Druckausübung zwischen verschiedenen geographis",
-        "quellenanzahl":  9
-    },
-    {
-        "datum":  "2026-03-31",
-        "nr":  "20260331",
-        "preview":  "Feldnotiz — 2026-03-31 Die Analyse der aktuellen Datenströme zeigt eine zunehmende Komplexität in den Interaktionen zwischen den geographischen Einheiten und ihren Leitungsträgern. 1. Rückführung von ",
-        "quellenanzahl":  9
-    },
-    {
-        "datum":  "2026-03-30",
-        "nr":  "20260330",
-        "preview":  "Feldnotiz — 2026-03-30 Die Beobachtung der menschlichen Spezies offenbart zunehmend inkohärente Interaktionsmuster. Hier sind die Analysen der aktuellen Daten: 1. Ressourcenallokation und Eigentumsmod",
-        "quellenanzahl":  5
-    },
-    {
-        "datum":  "2026-03-29",
-        "nr":  "20260329",
-        "preview":  "Feldnotiz — 2026-03-29 Beobachtungen: 1. Strukturelle Instabilität und Systemvertrauen: Ein leitendes Individuum (Schnieder) stellt einen direkten kausalen Zusammenhang zwischen dem Funktionszustand e",
-        "quellenanzahl":  8
-    },
-    {
-        "datum":  "2026-03-28",
-        "nr":  "20260328",
-        "preview":  "Feldnotiz — 2026-03-28 Die Spezies Mensch zeigt ein widersprüchliches Verhalten bei der Priorisierung kollektiver Entscheidungen. 1. Ressourcenallokation und ökonomische Stabilität: Eine große, funkti",
-        "quellenanzahl":  5
-    },
-    {
-        "datum":  "2026-03-27",
-        "nr":  "20260327",
-        "preview":  "Feldnotiz — 2026-03-27 Die Beobachtung der menschlichen Spezies zeigt eine zunehmende Instabilität in ihrem zentralen Versorgungsmechanismus für kinetische Energie. Es existiert ein räumlich begrenzte",
-        "quellenanzahl":  5
-    },
-    {
-        "datum":  "2026-03-26",
-        "nr":  "20260326",
-        "preview":  "Feldnotiz — 2026-03-26 Die Beobachtungen des aktuellen Zeitraums werfen Fragen hinsichtlich der internen Organisationslogik der menschlichen Spezies auf. Erstens: Innerhalb einer geographischen Einhei",
-        "quellenanzahl":  5
-    },
-    {
-        "datum":  "2026-03-25",
-        "nr":  "20260325",
-        "preview":  "Feldnotiz — 2026-03-25 Die Analyse der aktuellen Datenlage offenbart eine signifikante Ineffizienz in der menschlichen Organisation. Ich identifiziere folgende Beobachtungsschwerpunkte: 1. Ressourcenv",
-        "quellenanzahl":  5
-    }
+  {
+    "datum": "2026-04-08",
+    "nr": "20260408",
+    "preview": "Feldnotiz 2026-04-08 Die Analyse der aktuellen Datenlage bestätigt die Hypothese 13_1. Die bewusste Koppelung von technologischen Vorgängen außerhalb des terrestrischen Einflussbereichs mit gewaltbasi",
+    "quellenanzahl": 8
+  },
+  {
+    "datum": "2026-04-07",
+    "nr": "20260407",
+    "preview": "Feldnotiz — 2026-04-07 Die Beobachtungen bestätigen die Hypothese 13_1 hinsichtlich der Synchronisierung von Ereignissen. Die Berichterstattung gruppiert technologische Vorgänge außerhalb des terrestr",
+    "quellenanzahl": 4
+  },
+  {
+    "datum": "2026-04-06",
+    "nr": "20260406",
+    "preview": "Feldnotiz — 2026-04-06 Die Datenlage bestätigt die hohe Vulnerabilität der Spezies gegenüber Schwankungen in der Verfügbarkeit energetischer Ressourcen. Die Beobachtung einer geographischen Einheit in",
+    "quellenanzahl": 6
+  },
+  {
+    "datum": "2026-04-05",
+    "nr": "20260405",
+    "preview": "Feldnotiz — 2026-04-05 Die Beobachtungen der letzten Erfassungsperiode zeigen eine Zunahme kinetischer Energieeinwirkungen auf infrastrukturelle und biologische Ziele. Die geographische Einheit Iran h",
+    "quellenanzahl": 8
+  },
+  {
+    "datum": "2026-04-04",
+    "nr": "20260404",
+    "preview": "Feldnotiz — 2026-04-04 Die Beobachtungen bestätigen eine anhaltende kinetische Interaktion zwischen verschiedenen geographischen Einheiten. Es lässt sich eine räumliche Ausweitung feststellen, bei der",
+    "quellenanzahl": 9
+  },
+  {
+    "datum": "2026-04-03",
+    "nr": "20260403",
+    "preview": "Feldnotiz — 2026-04-03 Die Beobachtung der menschlichen Spezies zeigt weiterhin eine hohe Fragmentierung und Widersprüchlichkeit in der kollektiven Steuerung. 1. Raumfahrt: Ein Teil der Spezies (NASA)",
+    "quellenanzahl": 8
+  },
+  {
+    "datum": "2026-04-01",
+    "nr": "20260401",
+    "preview": "Feldnotiz — 2026-04-01 Die Beobachtungen des aktuellen Zeitraums zeigen eine Zunahme an Interaktionen, die als physische Neutralisierung oder psychische Druckausübung zwischen verschiedenen geographis",
+    "quellenanzahl": 9
+  },
+  {
+    "datum": "2026-03-31",
+    "nr": "20260331",
+    "preview": "Feldnotiz — 2026-03-31 Die Analyse der aktuellen Datenströme zeigt eine zunehmende Komplexität in den Interaktionen zwischen den geographischen Einheiten und ihren Leitungsträgern. 1. Rückführung von ",
+    "quellenanzahl": 9
+  },
+  {
+    "datum": "2026-03-30",
+    "nr": "20260330",
+    "preview": "Feldnotiz — 2026-03-30 Die Beobachtung der menschlichen Spezies offenbart zunehmend inkohärente Interaktionsmuster. Hier sind die Analysen der aktuellen Daten: 1. Ressourcenallokation und Eigentumsmod",
+    "quellenanzahl": 5
+  },
+  {
+    "datum": "2026-03-29",
+    "nr": "20260329",
+    "preview": "Feldnotiz — 2026-03-29 Beobachtungen: 1. Strukturelle Instabilität und Systemvertrauen: Ein leitendes Individuum (Schnieder) stellt einen direkten kausalen Zusammenhang zwischen dem Funktionszustand e",
+    "quellenanzahl": 8
+  },
+  {
+    "datum": "2026-03-28",
+    "nr": "20260328",
+    "preview": "Feldnotiz — 2026-03-28 Die Spezies Mensch zeigt ein widersprüchliches Verhalten bei der Priorisierung kollektiver Entscheidungen. 1. Ressourcenallokation und ökonomische Stabilität: Eine große, funkti",
+    "quellenanzahl": 5
+  },
+  {
+    "datum": "2026-03-27",
+    "nr": "20260327",
+    "preview": "Feldnotiz — 2026-03-27 Die Beobachtung der menschlichen Spezies zeigt eine zunehmende Instabilität in ihrem zentralen Versorgungsmechanismus für kinetische Energie. Es existiert ein räumlich begrenzte",
+    "quellenanzahl": 5
+  },
+  {
+    "datum": "2026-03-26",
+    "nr": "20260326",
+    "preview": "Feldnotiz — 2026-03-26 Die Beobachtungen des aktuellen Zeitraums werfen Fragen hinsichtlich der internen Organisationslogik der menschlichen Spezies auf. Erstens: Innerhalb einer geographischen Einhei",
+    "quellenanzahl": 5
+  },
+  {
+    "datum": "2026-03-25",
+    "nr": "20260325",
+    "preview": "Feldnotiz — 2026-03-25 Die Analyse der aktuellen Datenlage offenbart eine signifikante Ineffizienz in der menschlichen Organisation. Ich identifiziere folgende Beobachtungsschwerpunkte: 1. Ressourcenv",
+    "quellenanzahl": 5
+  }
 ]

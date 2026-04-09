@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sloppy — Über Sloppy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .about-body {
+      padding-top: 44px;
+    }
+
+    .about-section {
+      margin-bottom: 56px;
+    }
+
+    .about-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .about-section h3 {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 32px 0 18px;
+    }
+
+    .about-section h4 {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 3vw, 28px);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text);
+      margin: 32px 0 18px;
+    }
+
+    .about-section p {
+      margin-bottom: 28px;
+    }
+
+    .about-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-section hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    .about-section code {
+      font-family: var(--font-ui);
+      background: var(--bg-3);
+      color: var(--accent);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.92em;
+    }
+
+    .about-section strong {
+      font-family: var(--font-ui);
+      color: var(--text);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <span class="header-icon"><img class="header-icon-img" src="assets/icons/school_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+        <span class="header-icon-sep">&amp;</span>
+        <span class="header-icon"><img class="header-icon-img" src="assets/icons/construction_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+      </div>
+      <div class="header-right">
+        <div class="status-badge">
+          <div class="status-dot"></div>
+          Protokoll aktiv
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Theme wechseln"></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="page-eyebrow">Dokumentation des Systems</div>
+      <h1 class="page-title">Über Sloppy<span class="title-dot">.</span></h1>
+      <p class="page-subtitle">Idee, Architektur und Workflow des exobiologischen Forschungsprotokolls</p>
+      <div class="page-meta">
+        Fokus: <strong>Automatisierung</strong> &nbsp;·&nbsp;
+        Gedächtnis: <strong>Semantisches RAG</strong> &nbsp;·&nbsp;
+        Betrieb: <strong>Self-Hosted Infrastruktur</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <div class="nav-item" onclick="location.href='index.html'">Archiv</div>
+        <div class="nav-item">Hypothesen</div>
+        <div class="nav-item active" onclick="location.href='ueber-sloppy.html'">Über Sloppy</div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="view active">
+        <article class="feldnotiz-body about-body">
+          <section class="about-section">
+            <h2>Was Sloppy macht</h2>
+            <p>Sloppy ist ein vollautomatisiertes KI-System, das täglich Weltnachrichten analysiert und daraus eine Feldnotiz generiert — geschrieben aus der Perspektive eines außerirdischen Wissenschaftlers, der den Auftrag hat, die Spezies Mensch zu erforschen.</p>
+            <p>Die Figur kennt keine Geschichte, keine Kulturen, keine Staatsgrenzen. Ihr einziger Zugang zur Menschheit sind Nachrichtenmedien. Aus diesem Material erschließt sie Strukturen, bildet Hypothesen, klassifiziert Akteure — und berichtet darüber für ihre Heimatwelt, nicht für ein menschliches Publikum.</p>
+            <p>Was dabei täglich entsteht, ist kein Nachrichtenkommentar und keine Satire. Es ist eine konsequent fremde Beobachterperspektive auf das Weltgeschehen — nüchtern, sachlich, ohne kulturelle Vorannahmen. Der Effekt entsteht nicht durch Inszenierung, sondern durch die Logik des Systems selbst.</p>
+          </section>
+
+          <section class="about-section">
+            <h2>Warum Sloppy</h2>
+            <p>Sloppy verbindet drei Disziplinen, die in der Praxis selten so konsequent zusammengedacht werden: Automatisierung, künstliche Intelligenz in Form von generativen Sprachmodellen und semantisches Wissensmanagement.</p>
+            <p>Das Projekt zeigt, wie diese drei Ebenen ineinandergreifen. Automatisierung, realisiert mit n8n, orchestriert den gesamten täglichen Ablauf ohne manuellen Eingriff. Generative KI, hier Google Gemini, übernimmt nicht nur die Inhaltsgenerierung, sondern auch die strukturierte Extraktion und Aufbereitung von Wissen aus diesem Inhalt. Dieses Wissen fließt in ein semantisches Speichersystem, aus dem es täglich wieder abgerufen, kontextualisiert und in die nächste Generierung eingespeist wird.</p>
+            <p>Das Prinzip dahinter ist Retrieval Augmented Generation, kurz RAG. Statt einem Sprachmodell alles Wissen im Prompt mitzugeben oder auf sein Trainings-Vorwissen zu vertrauen, wird gezielt relevantes Wissen aus einer Vektordatenbank abgerufen und als Kontext bereitgestellt. Sloppy erinnert sich nicht zufällig, er sucht semantisch nach dem, was relevant ist.</p>
+            <p>Das gesamte System läuft auf dedizierter eigener Infrastruktur. n8n, die Vektordatenbank Qdrant und das Website-Deployment sind selbst gehostet und vollständig unter eigener Kontrolle. Keine externen Datenabflüsse, keine Abhängigkeit von Drittplattformen jenseits der KI-APIs selbst.</p>
+          </section>
+
+          <section class="about-section">
+            <h2>Technischer Deep Dive</h2>
+            <p>Der folgende Abschnitt richtet sich an alle, die verstehen wollen, wie Sloppy unter der Haube funktioniert — Schritt für Schritt, ohne Vereinfachungen.</p>
+
+            <hr>
+
+            <h3>Infrastruktur</h3>
+            <p>Die gesamte Plattform läuft auf einem dedizierten Linux-Server bei Hetzner Cloud. Docker übernimmt die Containerisierung aller Dienste — jede Komponente läuft isoliert in einem eigenen Container, mit definierten Abhängigkeiten und reproduzierbaren Konfigurationen. Coolify fungiert als selbst gehostete Deployment-Plattform und übernimmt das Management der Container, automatische Deployments und die Verwaltung von Umgebungsvariablen. Traefik läuft als Reverse Proxy vor allen Diensten, übernimmt das Routing eingehender Anfragen und terminiert SSL automatisch über Let's Encrypt.</p>
+
+            <hr>
+
+            <h3>n8n</h3>
+            <p>n8n ist ein selbst gehosteter Low-Code-Automatisierungsserver. Workflows bestehen aus einzelnen Nodes, die jeweils eine definierte Aufgabe erfüllen und ihre Ausgabe als strukturierte Daten an den nächsten Node weitergeben. Das ermöglicht komplexe, mehrstufige Prozesse ohne klassische Programmierung, mit vollem Zugriff auf JavaScript für alle Logik-Schritte, die über einfache Transformationen hinausgehen. Sloppy wird vollständig durch zwei n8n-Workflows betrieben, die täglich automatisch ausgeführt werden.</p>
+
+            <hr>
+
+            <h3>Qdrant</h3>
+            <p>Qdrant ist eine Vektordatenbank. Der entscheidende Unterschied zu einer relationalen Datenbank: Inhalte werden nicht als Text gespeichert und per exaktem Abgleich gefunden, sondern als hochdimensionale Vektoren, mathematische Repräsentationen von Bedeutung. Diese Vektoren werden durch ein Embedding-Modell erzeugt, hier Googles Gemini Embedding. Semantisch ähnliche Inhalte landen im Vektorraum nah beieinander, unabhängig von der konkreten Wortwahl. Eine Suche nach „Militärkonflikt“ findet dadurch auch Einträge, die „Krieg“ oder „Kampfhandlungen“ enthalten. Das ist die technische Grundlage, die RAG erst sinnvoll macht und Sloppys Gedächtnis von einer simplen Textsuche unterscheidet.</p>
+
+            <hr>
+
+            <h3>Google Gemini</h3>
+            <p>Gemini ist das Sprachmodell, das Sloppy zum Schreiben, Analysieren und Extrahieren befähigt. Es kommt im Workflow nicht als eine monolithische Einheit zum Einsatz, sondern an mehreren Stellen mit unterschiedlichen Konfigurationen und präzisen Aufgaben. Temperature, also der Parameter, der steuert, wie deterministisch oder kreativ ein Modell antwortet, wird je nach Aufgabe unterschiedlich gesetzt. Für strukturierte Datenextraktion niedrig, für das Schreiben der Feldnotiz höher. Das Embedding-Modell, ebenfalls von Google, übernimmt die Vektorisierung aller Inhalte, die in Qdrant gespeichert oder dort gesucht werden.</p>
+            <p>Gemini ist die einzige Komponente im System, bei der Daten den eigenen Server verlassen. Der Einsatz eines cloudbasierten Sprachmodells hat folgenden Grund: Ein leistungsfähiges Sprachmodell selbst zu hosten würde eine dedizierte GPU-Infrastruktur voraussetzen, die mit erheblichen monatlichen Kosten verbunden wäre. Google stellt über seine API kostenfreie Kontingente bereit, die für ein Projekt in diesem Umfang vollständig ausreichen.</p>
+
+            <h3>Der Workflow</h3>
+
+            <h4>Datenbeschaffung und Aufbereitung</h4>
+            <p>Bevor Sloppy auch nur einen Satz schreibt, muss das Rohmaterial beschafft, zeitlich gefiltert und in eine verarbeitbare Struktur gebracht werden. Dieser erste Block hat keine KI-Beteiligung — er ist reine Datenpipeline. RSS-Feed lesen, irrelevante Artikel ausfiltern, Menge begrenzen, alles zu einem einzigen strukturierten Datensatz zusammenfassen. Das Ergebnis ist ein Array aller relevanten Artikel des Tages, das als gemeinsame Grundlage für alle nachfolgenden Schritte dient.</p>
+            <p>Der Workflow startet täglich um 06:15 Uhr durch einen Schedule Trigger. Das ist ein einfacher Cron-basierter Auslöser in n8n, keine externe Abhängigkeit, kein Webhook.</p>
+            <p><strong>RSS Read</strong> liest direkt im Anschluss den RSS-Feed der Deutschen Welle (<code>rss.dw.com/xml/rss-de-top</code>). Der RSS-Node in n8n parst das XML des Feeds und gibt jeden Artikel als separates Item weiter. Jedes Item enthält unter anderem Titel, Beschreibungstext (<code>contentSnippet</code>), die Artikel-URL sowie einen ISO-8601-Zeitstempel der Veröffentlichung.</p>
+            <p><strong>Filter</strong> schränkt die Artikelmenge auf den relevanten Zeitraum ein. Die Bedingung prüft das Feld <code>isoDate</code> jedes Items gegen einen dynamisch berechneten Schwellenwert: <code>$now.minus(24, 'hours').toISO()</code>. Nur Artikel, die innerhalb der letzten 24 Stunden veröffentlicht wurden, passieren diesen Node. Alle anderen werden verworfen. Das stellt sicher, dass Sloppy ausschließlich aktuelle Nachrichten verarbeitet und nicht ältere Artikel aus dem Feed erneut aufgreift.</p>
+            <p><strong>Limit</strong> kappt die Ergebnismenge auf maximal zehn Artikel. Das ist eine bewusste Begrenzung: Mehr Input würde den nachfolgenden Prompt für das Sprachmodell unverhältnismäßig verlängern, ohne dass der Mehrwert die zusätzlichen Token-Kosten rechtfertigt.</p>
+            <p><strong>Aggregate</strong> fasst alle einzelnen Items, die bis hier als separate Datensätze durch den Workflow fließen, in ein einziges Item zusammen. Das Ergebnis ist ein JSON-Objekt mit einem Array <code>items[]</code>, das alle Artikel enthält. Dieser Aggregationsschritt ist notwendig, weil die nachfolgenden KI-Nodes das gesamte Artikelpaket als zusammenhängenden Kontext benötigen und nicht als einzelne unabhängige Aufrufe verarbeiten sollen.</p>
+
+            <h4>Gedächtnisabruf</h4>
+            <p>Damit Sloppy nicht jeden Tag bei null anfängt, wird vor dem eigentlichen Schreiben sein Gedächtnis befragt. Das ist konzeptionell der Kern des RAG-Prinzips: Nicht das Sprachmodell trägt das Wissen, sondern die Datenbank. Dieser Block extrahiert aus den heutigen Artikeln präzise Suchbegriffe, sucht damit semantisch in Sloppys Gedächtnisdatenbank und bereitet die relevantesten Erinnerungen für die Übergabe an das Sprachmodell auf. Was den Block verlässt, ist ein konsolidierter Gedächtniskontext — abgestimmt auf die Themen des Tages.</p>
+            <p><strong>Basic LLM Chain</strong> ist der erste KI-Aufruf im Workflow. Gemini wird hier nicht zum Schreiben eingesetzt, sondern zur strukturierten Extraktion. Das Modell läuft mit Temperature 0.1, also nahe dem deterministischen Minimum — kreative Variation ist hier nicht erwünscht, Präzision schon. Die Aufgabe: Aus jedem Artikel Eigennamen und Kernthemen extrahieren und als JSON-Array zurückgeben. Ein Objekt pro Artikel, ein <code>keywords</code>-Feld mit einer kommagetrennten Liste. Aus einem Artikel über Sanktionen gegen den Iran wird also beispielsweise <code>"Iran, Trump, Sanktionen, Nahostkonflikt"</code>. Der Grund für diesen Schritt liegt in der Funktionsweise von Vektordatenbanken: Eine semantische Suche mit einem vollständigen Artikeltext als Query erzeugt einen Vektor, der den Durchschnitt aller darin enthaltenen Themen repräsentiert. Das verwässert die Suchanfrage erheblich. Komprimierte Schlüsselbegriffe hingegen erzeugen präzisere Vektoren und damit treffsichere Suchergebnisse.</p>
+            <p><strong>Code in JavaScript</strong> parst den JSON-Output von Gemini und bereitet daraus pro Artikel eine separate <code>searchQuery</code> auf. Der Node fängt dabei Inkonsistenzen im Gemini-Output ab, etwa unterschiedliche Schreibweisen der Feldnamen (<code>keywords</code> vs. <code>Keywords</code>), und normalisiert sie. Ergebnis ist eine Liste einzelner Items, jedes mit einer sauberen Suchanfrage als String.</p>
+            <p><strong>Qdrant Vector Store</strong> führt für jede dieser Suchanfragen eine semantische Suche in Sloppys Gedächtnisdatenbank durch. Das Embedding-Modell <code>gemini-embedding-001</code> vektorisiert den Suchstring, und Qdrant gibt die drei ähnlichsten Einträge zurück (<code>topK: 3</code>). Gesucht wird über die gesamte Collection <code>sloppy_gedaechtnis</code>, die strukturierte Einträge zu Einheiten, Individuen, Hypothesen und offenen Fragen enthält, sowie absatzweise gespeicherte Passagen aus früheren Feldnotizen. Ähnlichkeit bedeutet hier semantische Nähe im Vektorraum, nicht Textübereinstimmung.</p>
+            <p><strong>Code in JavaScript</strong> dedupliziert die Ergebnisse. Da pro Artikel separat gesucht wird, können dieselben Gedächtniseinträge mehrfach zurückgegeben werden, etwa wenn drei verschiedene Artikel alle auf Deutschland als relevante Einheit verweisen. Der Node filtert anhand der <code>metadata.id</code> und stellt sicher, dass jeder Eintrag nur einmal in den nachfolgenden Kontext einfließt.</p>
+            <p><strong>Aggregate</strong> fasst alle deduplizierten Gedächtniseinträge wieder zu einem einzigen Item zusammen. Was diesen Node verlässt, ist eine konsolidierte Liste der relevantesten Erinnerungen aus Sloppys bisheriger Forschung, direkt abgestimmt auf die heutigen Nachrichten — bereit für die Übergabe an die nächste KI-Stufe.</p>
+
+            <h4>Hypothesenprüfung und Feldnotiz</h4>
+            <p>Sloppy akkumuliert über Zeit vorläufige Hypothesen über menschliches Verhalten. Bevor er die heutige Feldnotiz schreibt, wird geprüft, ob das neue Material diese Hypothesen stützt, ihnen widerspricht oder schlicht keine relevante Aussage darüber erlaubt. Dieses Ergebnis fließt als zusätzlicher Kontext in die Feldnotiz-Generierung ein. Der Block endet mit dem zentralen Output des gesamten Workflows: der fertigen Feldnotiz.</p>
+            <p><strong>Basic LLM Chain (Gemini Hypothesen-Vorprüfung)</strong> erhält zwei Inputs: die Hypothesen aus dem Gedächtniskontext, gefiltert nach dem Typ <code>hypothesen</code>, sowie das heutige Quellmaterial. Das Modell läuft mit Temperature 0.2 — die Aufgabe ist analytisch, nicht generativ. Für jede Hypothese gibt es genau einen von drei möglichen Status-Werten zurück: <code>gestützt</code>, <code>infrage_gestellt</code> oder <code>nicht_prüfbar</code>, jeweils mit einer kurzen sachlichen Begründung. Der Output ist valides JSON. Keine Prosa, keine Interpretation über das Material hinaus.</p>
+            <p><strong>Basic LLM Chain Gemini (Gemini Feldnotiz)</strong> ist der einzige Node im gesamten Workflow, der mit erhöhter Temperature läuft, konkret 0.7. Hier ist kreative Variation erwünscht — der Text soll nicht deterministisch und formelhaft klingen, sondern Sloppys Stimme tragen. Das Modell erhält als Kontext das vollständige Quellmaterial, die aufbereiteten Gedächtniseinträge aus Block 2 mit Typ, Datum und ID als Metadaten, sowie den Hypothesen-Status aus dem vorherigen Schritt. Der System-Prompt definiert Sloppys Charakter, seine Sprache, seine Wissensgrenzen und die formalen Anforderungen an die Feldnotiz vollständig. Was den Node verlässt, ist der fertige Feldnotiz-Text — der zentrale Output des gesamten Workflows.</p>
+
+            <h4>Gedächtnisextraktion und Speicherung</h4>
+            <p>Die fertige Feldnotiz ist nicht nur ein Publikationsartefakt — sie ist gleichzeitig Rohmaterial für Sloppys wachsendes Gedächtnis. Dieser Block extrahiert strukturierte Wissenseinträge aus dem Fließtext der Feldnotiz und schreibt sie in zwei Formen in Qdrant: als semantisch typisierte Einträge für Einheiten, Individuen, Hypothesen und offene Fragen, und als absatzweise Segmente der Feldnotiz selbst. Beides zusammen stellt sicher, dass Sloppy beim nächsten Lauf sowohl auf komprimiertes Faktenwissen als auch auf den vollen Beobachtungskontext früherer Tage zugreifen kann.</p>
+            <p><strong>Basic LLM Chain Gemini (Gedächtnisextraktion)</strong> erhält die fertige Feldnotiz als einzigen Input. Das Modell läuft mit Temperature 0.2. Die Aufgabe ist rein extraktiv: Aus dem Fließtext sollen strukturierte JSON-Einträge für die vier Basis-Arrays des Gedächtnissystems erzeugt werden — Einheiten, Individuen, Hypothesen und offene Fragen. Dabei ist dem Modell explizit erlaubt, eigene zusätzliche Arrays anzulegen, wenn das Material Kategorien enthält, die in keine der vier Basis-Typen passen. Der Output besteht aus einem lesbaren Zusammenfassungstext gefolgt von einem validen JSON-Block.</p>
+            <p><strong>Code in JavaScript (Gedächtnis-Aufbereitung)</strong> parst diesen JSON-Output und bereitet zwei Arten von Einträgen für Qdrant vor. Erstens iteriert er über alle Arrays im JSON — die vier Basis-Typen sowie etwaige Eigenkategorien — und erzeugt pro Eintrag ein strukturiertes Item mit dem serialisierten Inhalt als Text und den Metadaten <code>typ</code>, <code>id</code>, <code>datum</code> und <code>feldnotiz</code>. Zweitens splittet er den Feldnotiz-Text in einzelne Absätze und erzeugt pro Absatz ein eigenes Item mit dem Metadaten-Typ <code>feldnotiz_absatz</code>. Beide Typen verlassen den Node als gemischtes Array einzelner Items.</p>
+            <p><strong>Qdrant Vector Store (Insert)</strong> schreibt alle Items in die Collection <code>sloppy_gedaechtnis</code>. Der Default Data Loader übernimmt dabei die Zuordnung von Text und Metadaten für jeden Eintrag, das Embedding-Modell <code>gemini-embedding-001</code> vektorisiert den Text, und Qdrant speichert beides zusammen. Jeder Eintrag ist damit über semantische Suche auffindbar — sowohl die strukturierten Gedächtniseinträge als auch die Feldnotiz-Absätze.</p>
+
+            <h4>Datensicherung</h4>
+            <p>Dieser Block läuft parallel zur Gedächtnisverarbeitung und dient der menschenlesbaren Archivierung. Während Qdrant die strukturierten und vektorisierten Einträge für die maschinelle Weiterverarbeitung speichert, landen hier die Rohtexte als Markdown-Dateien in Google Drive — als lesbares Backup und zur manuellen Kontrolle der täglichen Outputs.</p>
+            <p><strong>Google Drive (Feldnotiz)</strong> schreibt den vollständigen Feldnotiz-Text als Markdown-Datei in einen definierten Drive-Ordner. Der Dateiname folgt dem Schema <code>YYYY-MM-DD_feldnotiz.md</code>. Diese Datei ist das tägliche Primärarchiv von Sloppys Output in lesbarer Form.</p>
+            <p><strong>Google Drive (Gedächtnis)</strong> schreibt den Output der Gedächtnisextraktion — also den lesbaren Zusammenfassungstext plus den vollständigen JSON-Block — als separate Markdown-Datei in denselben Ordner, unter dem Schema <code>YYYY-MM-DD_Gedaechtnis.md</code>. Das ermöglicht die manuelle Nachvollziehbarkeit dessen, was täglich in Qdrant gespeichert wird, ohne direkt in die Datenbank schauen zu müssen.</p>
+            <p><strong>Telegram (Benachrichtigung)</strong> sendet abschließend den Link zur frisch veröffentlichten Feldnotiz auf der Website in einen Telegram-Kanal. Der Link wird dynamisch aus dem aktuellen Datum zusammengesetzt.</p>
+
+            <h3>Der Website-Workflow</h3>
+            <p>Dieser Workflow übernimmt die gesamte Publikationskette — von der fertigen Feldnotiz bis zur aktualisierten, öffentlich erreichbaren Website. Er wird nicht durch einen Timer ausgelöst, sondern durch einen Webhook-Call vom Feldnotiz-Workflow. Das Ergebnis ist ein vollständig automatisiertes Deployment: Audiodatei, Einzelseite der Feldnotiz und aktualisierte Archivübersicht landen per Git-Commit im Repository, woraufhin Coolify die Website automatisch neu deployt.</p>
+
+            <hr>
+
+            <p><strong>Webhook</strong> empfängt den POST-Request des Feldnotiz-Workflows. Der Payload enthält vier Felder: <code>datum</code> im Format <code>YYYY-MM-DD</code>, <code>nr</code> als numerische ID im Format <code>YYYYMMDD</code>, den vollständigen Feldnotiz-Text und ein Array der Quell-URLs.</p>
+            <p><strong>Text Splitter</strong> bereinigt den Feldnotiz-Text für die anschließende Sprachsynthese. Die Feldnotiz endet mit einer Liste von Quell-URLs — diese würden von einer Text-to-Speech-Engine vorgelesen werden, was unerwünscht ist. Der Node schneidet den Text beim ersten Vorkommen von <code>http</code> ab und gibt nur den reinen Fließtext weiter.</p>
+            <p><strong>Google TTS — Charon</strong> ruft die Google Cloud Text-to-Speech API auf und synthetisiert den bereinigten Text zu einer MP3-Datei. Die verwendete Stimme ist <code>de-DE-Chirp3-HD-Charon</code> — eine hochqualitative neuronale Stimme aus der Chirp3-HD-Generation von Google. Die API gibt die Audiodatei als Base64-kodierten String zurück.</p>
+            <p><strong>Code (HTML Feldnotiz generieren)</strong> baut die vollständige HTML-Seite für den Tageseintrag. Der Node liest Datum, Feldnotiz-Text und Quellen aus dem Webhook-Payload sowie den Base64-Audiostring aus dem TTS-Node, strukturiert den Text in HTML-Absätze, generiert die Quellenliste und bettet einen Audio-Player ein. Das Ergebnis ist eine fertige, in sich geschlossene HTML-Datei.</p>
+            <p><strong>GitHub — index.html SHA lesen</strong> liest den aktuellen SHA-Hash der <code>index.html</code> aus dem GitHub-Repository über die GitHub Contents API. Dieser SHA ist zwingend erforderlich: Die GitHub API verweigert Update-Operationen auf bestehende Dateien ohne den korrekten SHA des aktuellen Stands — ein Mechanismus zur Konfliktvermeidung bei konkurrierenden Schreibzugriffen.</p>
+            <p><strong>GitHub — entries.json lesen</strong> liest den aktuellen Inhalt von <code>data/entries.json</code> aus dem Repository. Diese Datei ist das strukturierte Inhaltsverzeichnis aller bisher publizierten Feldnotizen mit Datum, numerischer ID, einem Preview-Text der ersten 200 Zeichen und der Anzahl der Quellen. Der Request verwendet den Header <code>Accept: application/vnd.github.v3.raw</code>, um den Dateiinhalt direkt als Text zu erhalten statt als Base64-kodiertes Objekt.</p>
+            <p><strong>Code (entries.json und index.html bauen)</strong> ist der zentrale Aufbereitungsnode des Workflows. Er parst die bestehende <code>entries.json</code>, hängt den neuen Tageseintrag vorne ein, generiert daraus die vollständige <code>index.html</code> mit allen Archivkarten, stellt die SHAs für die nachfolgenden Update-Operationen bereit und konvertiert den Base64-Audiostring in n8n Binary Data, das der MP3-Push-Node als Datei an GitHub senden kann.</p>
+            <p><strong>MP3 pushen</strong> schreibt die Audiodatei als neue Datei unter <code>audio/DATUM.mp3</code> in das GitHub-Repository. Da es sich um eine täglich neue Datei handelt, ist das eine Create-Operation.</p>
+            <p><strong>HTML pushen</strong> schreibt die Feldnotiz-HTML-Seite als neue Datei unter <code>feldnotizen/DATUM.html</code> in das Repository.</p>
+            <p><strong>entries pushen</strong> aktualisiert <code>data/entries.json</code> mit dem um den neuen Eintrag erweiterten Array. Das ist eine Edit-Operation auf eine bestehende Datei.</p>
+            <p><strong>index pushen</strong> aktualisiert <code>index.html</code> mit der neu generierten Archivübersicht. Dieser letzte Push löst über einen in GitHub konfigurierten Webhook einen Deployment-Trigger in Coolify aus, das die statische Website automatisch neu baut und ausliefert. Die Kette von der fertigen Feldnotiz bis zur aktualisierten öffentlichen Website ist damit vollständig automatisiert.</p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>Sloppy · Exobiologisches Forschungsprotokoll</p>
+        <p>Automatisch generiert · Täglich 06:15 Uhr</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/player.js"></script>
+</body>
+</html>
